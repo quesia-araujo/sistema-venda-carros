@@ -70,4 +70,5 @@ Defina o usuário, email e senha.
 
 Usuários e administradores visualizam o sistema de modos diferentes.
 
-admin faz a gestão do conteúdo do site.
+admin faz a gestão do conteúdo do site, pela rota admin
+
