@@ -1,22 +1,22 @@
-# passos 
+# Passos iniciais 
 
-## Passos parar  criação de aplicação Django
+## Passos para Criação de um Projeto Django
 
-- criar pasta
-- criar e ativar ambiente virtual
-- inicializar git e gitignore
-- instalar django `pip install django`
-- verificar se django foi instalado com sucesso: `django-admin --version`
-- criar projeto django `django-admin start app .`
-- rodar servidor `python manage.py runserver`
+1. criar pasta do projeto
+2. criar e ativar ambiente virtual
+3. inicializar git e criar o arquivo .gitignore
+4. instalar django `pip install django`
+5. verificar se django foi instalado com sucesso: `django-admin --version`
+6. criar a base do projeto django `django-admin start app .`
+7. rodar servidor `python manage.py runserver`
 
-### Apps em  django
+### Apps em  Django
 
 Ao usar  o comando `django-admin start app .`, estamos criando o aplicativo principal, a base e coração do projeto. 
 
 A  criação de  novos apps se dá com base na divisão lógica e responsabilidade do projeto, onde cada app fica responsável por apenas uma única responsabilidade.
 
-![alt text](image.png)
+![alt text](/docs/div-apps.png)
 
 A criação de um novo app se dá pelo comando `python manage.py startapp nome-do-app`.
 
@@ -31,7 +31,7 @@ Na raíz:
 
 No app principal:
 
-- settings.py: todas as configurações do projeto (apps instalados,  connnfiguração de banco de dados entre outras)
+- settings.py: todas as configurações do projeto (apps instalados, configuração de banco de dados entre outras)
 - urls.py: as rotas do projeto
 - asgi e wsgi: quando colocar aplicação em produção, configura aplication server.
 
@@ -45,18 +45,18 @@ Outros apps
 
 ### Inicializar  banco de dados
 
-1 - Rastreia arquivos em busca de mudanças:
+1. Rastreia arquivos em busca de mudanças:
 `python manage.py makemigrations`
 
-2 - Executa de fato:
+2. Executa as mudaças de fato:
 `python manage.py migrate`
 
-Sempre que alterar algo no banco de dados,  execute os passos 1 e 2.
+Sempre que alterar algo no modelo do banco de dados,  execute os passos 1 e 2.
 
 
 ### Criar usuário administrador django (super usuário)
 
-Antes de criar o usuário administrador, inicialize o banco de dados.
+Antes de criar o usuário administrador, inicialize o banco de dados. Após o banco de dados ser inicializado, a criação de super usuário se dá pelo comando:
 
 `python manage.py createsuperuser`
 
@@ -66,7 +66,7 @@ Defina o usuário, email e senha.
 
 #### Visão do usuário versus visão do admin
 
-![alt text](image-1.png)
+![alt text](/docs/camadas.png)
 
 Usuários e administradores visualizam o sistema de modos diferentes.
 
