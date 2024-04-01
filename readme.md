@@ -1,6 +1,38 @@
-# Passos iniciais 
+# Sobre o Projeto
 
-## Passos para Criação de um Projeto Django
+Projeto Django direcionado a um sistema web para vendas de carros.
+
+## App cars
+
+O app cars tem a função de gerenciar o cadastro e CRUD (Create, Read, Uptade e Delete) de carros da base de dados do sistema.
+
+### Models
+
+A tabela car possui os seguintes dados sobre os carros do sistema:
+
+- id (int - auto incrementável)
+- modelo (string)
+- marca (chave estrangeira da tabela marca)
+- ano de fabricação (int)
+- ano do  modelo (int)
+- placa (string)
+- valor (float)
+- foto (imagem)
+
+A tabela brand possui os seguintes campos:
+
+- id (int - auto incrementável)
+- marca  (string)
+
+### Views e URLs
+
+O acesso para visão de usuário se dará pela rota `cars/`. 
+O usuário terá acesso a uma barra de pesquisa, onde poderá filtrar os resultados de exibição pelo modelo do carro.
+
+
+## Comentários sobre a Criação de um Projeto Django
+
+Passos para criar um projeto Django:
 
 1. criar pasta do projeto
 2. criar e ativar ambiente virtual
