@@ -1,14 +1,23 @@
 # Comentários sobre a Criação de um Projeto Django
 
-Passos para criar um projeto Django:
+Passos para criar um projeto Django novo:
 
-1. criar pasta do projeto
-2. criar e ativar ambiente virtual
-3. inicializar git e criar o arquivo .gitignore
-4. instalar django `pip install django`
-5. verificar se django foi instalado com sucesso: `django-admin --version`
-6. criar a base do projeto django `django-admin start app .`
-7. rodar servidor `python manage.py runserver`
+1. criar o diretório do projeto
+2. abrir o diretório no IDLE
+    - criar e ativar ambiente virtual
+        - usando [`virtualenv`](https://pypi.org/project/virtualenv/)
+        - `py -3 -m venv .venv`
+    - inicializar git e criar o arquivo .gitignore
+3. instalar django
+    - `pip install django`
+4. verificar se django foi instalado com sucesso
+    - `django-admin --version`
+5. criar a base do projeto django
+    - `django-admin start app .`
+6. rodar servidor
+    - `python manage.py runserver`
+7. adicionar arquivo requirements.txt
+    - `pip install -r requirements.txt`
 
 ## Apps em  Django
 
@@ -31,17 +40,18 @@ Na raíz:
 
 No app principal:
 
-- settings.py: todas as configurações do projeto (apps instalados, configuração de banco de dados entre outras)
+- settings.py: configurações gerais do projeto (apps instalados, configuração de banco de dados entre outras)
 - urls.py: as rotas do projeto
 - asgi e wsgi: quando colocar aplicação em produção, configura aplication server.
 
 Outros apps
 
-- test.py: testes unitários, integração, unittest, pytest, selenium
-- apps.py: configuração do app atual
-- models.py: modelos, tabelas de banco de dados
-- views.py: todas as views (lógica da aplicação)
-- admin.py: admin do django
+- test.py: testes unitários, integração, unittest, pytest, selenium e etc.
+- apps.py: configuração do app atual.
+- models.py: modelos, tabelas de banco de dados.
+- views.py: todas as views (lógica da aplicação).
+- admin.py: admin do appp django.
+
 
 ## Inicializar  banco de dados
 
@@ -70,4 +80,12 @@ Defina o usuário, email e senha.
 
 Usuários e administradores visualizam o sistema de modos diferentes.
 
-admin faz a gestão do conteúdo do site, pela rota admin
+admin faz a gestão do conteúdo do site, pela rota, que por padrão é, `admin`
+
+## Django e Banco de Dados
+
+## URLs,Views e Templates
+
+## ORM E Querys no Django
+
+## Forms no Django
